@@ -1,0 +1,57 @@
+[gd_scene load_steps=6 format=3 uid="uid://bmjmx7di115j"]
+
+[ext_resource type="Script" path="res://Scripts/Player.gd" id="1_o6ecj"]
+[ext_resource type="Texture2D" uid="uid://dy8b0ajq35lvq" path="res://Assets/player.png" id="1_qwiws"]
+[ext_resource type="PackedScene" uid="uid://ce442l56d761d" path="res://Scenes/Shot.tscn" id="2_yeyp1"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_aflob"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jba5t"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_qwiws")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"Shoot",
+"speed": 5.0
+}]
+
+[node name="Player" type="CharacterBody2D" groups=["player"]]
+collision_mask = 7
+script = ExtResource("1_o6ecj")
+Shot = ExtResource("2_yeyp1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." groups=["player"]]
+position = Vector2(-1, 4.76837e-07)
+rotation = 0.0014454
+shape = SubResource("CapsuleShape2D_aflob")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." groups=["player"]]
+position = Vector2(1, 0)
+rotation = 1.5708
+sprite_frames = SubResource("SpriteFrames_jba5t")
+animation = &"Idle"
+
+[node name="Eyes" type="Node2D" parent="." groups=["player"]]
+position = Vector2(7, 0)
+
+[node name="DamageParticle" type="CPUParticles2D" parent="."]
+emitting = false
+amount = 10
+lifetime = 4.0
+one_shot = true
+speed_scale = 4.15
+explosiveness = 0.86
+lifetime_randomness = 1.0
+emission_shape = 1
+emission_sphere_radius = 22.34
+gravity = Vector2(0, 0)
+scale_amount_min = 5.0
+scale_amount_max = 10.0
+color = Color(0.658824, 0, 0, 1)

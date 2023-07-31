@@ -1,0 +1,65 @@
+[gd_scene load_steps=7 format=3 uid="uid://b8unk8ykvml8u"]
+
+[ext_resource type="Texture2D" uid="uid://cjwor2k8f22de" path="res://Assets/weak enemy.png" id="1_7mnle"]
+[ext_resource type="Script" path="res://Scripts/WeakEnemy.gd" id="1_o1xfw"]
+[ext_resource type="PackedScene" uid="uid://ncmij20y0b8g" path="res://Scenes/WeakEnemyShot.tscn" id="2_f3m5r"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_bdtpv"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_awbk7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_7mnle")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_6odn8"]
+radius = 128.0
+
+[node name="WeakEnemy" type="CharacterBody2D" groups=["mobs"]]
+collision_layer = 4
+script = ExtResource("1_o1xfw")
+Shot = ExtResource("2_f3m5r")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." groups=["mobs"]]
+shape = SubResource("CapsuleShape2D_bdtpv")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." groups=["mobs"]]
+modulate = Color(1, 0.690196, 0.639216, 1)
+rotation = 1.5708
+sprite_frames = SubResource("SpriteFrames_awbk7")
+animation = &"Idle"
+
+[node name="DeathParticles" type="CPUParticles2D" parent="." groups=["mobs"]]
+emitting = false
+lifetime = 4.0
+one_shot = true
+speed_scale = 5.0
+explosiveness = 0.51
+lifetime_randomness = 1.0
+local_coords = true
+emission_shape = 1
+emission_sphere_radius = 22.34
+gravity = Vector2(0, 0)
+scale_amount_min = 5.0
+scale_amount_max = 10.0
+color = Color(0.658824, 0, 0, 1)
+
+[node name="Area2D" type="Area2D" parent="." groups=["mobs"]]
+collision_layer = 4
+collision_mask = 7
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" groups=["mobs"]]
+shape = SubResource("CircleShape2D_6odn8")
+
+[node name="Cooldown" type="Timer" parent="." groups=["mobs"]]
+wait_time = 2.0
+autostart = true
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
+[connection signal="timeout" from="Cooldown" to="." method="_on_cooldown_timeout"]
