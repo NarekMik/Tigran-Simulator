@@ -1,9 +1,8 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1690799471
-ExplodingEnemy.gd::GDScript::-1::1690798878::0::1::::<>CharacterBody2D<>::
+::res://::1690823741
 export_presets.cfg::TextFile::-1::1690734339::0::1::::<><>::
 icon.svg::CompressedTexture2D::2183112925065491283::1690711733::1690711744::1::::<><>::
-::res://Assets/::1690797757
+::res://Assets/::1690804864
 crosshair.png::CompressedTexture2D::114450667173649280::1690714039::1690714039::1::::<><>::
 ExplodingEnemy.png::CompressedTexture2D::4882767995851804233::1690796967::1690797757::1::::<><>::
 ground texture.png::CompressedTexture2D::8032412202600608904::1690715175::1690715887::1::::<><>::
@@ -12,24 +11,31 @@ player.png::CompressedTexture2D::8912024140785258358::1690718510::1690718510::1:
 tigran simulator logo.png::CompressedTexture2D::757422203363492284::1690795689::1690795702::1::::<><>::
 Tigran_Arzakantsyan.jpg::CompressedTexture2D::5364242557128983228::1690795923::1690795924::1::::<><>::
 weak enemy.png::CompressedTexture2D::5450839102198563614::1690722440::1690722444::1::::<><>::
+::res://Assets/Fonts/::1690804864
+dynamic.ttf::FontFile::8061264072474694642::1690804844::1690804864::1::::<><>::
 ::res://Bean/::1690734310
 ::res://Bin/::1690734319
-::res://Scenes/::1690799471
-DeathScreen.tscn::PackedScene::5486797224248040053::1690799315::0::1::::<><>::res://Scripts/DeathScreen.gd
-ExplodingEnemy.tscn::PackedScene::6594003955089856432::1690799475::0::1::::<><>::res://ExplodingEnemy.gd<>uid://cbtiqfxpuh8i4::::res://Assets/ExplodingEnemy.png
-Level.tscn::PackedScene::5412899007866447797::1690799330::0::1::::<><>::uid://dmo7wjw5la5ey::::res://Assets/ground texture.png<>uid://bmjmx7di115j::::res://Scenes/Player.tscn<>uid://b8unk8ykvml8u::::res://Scenes/WeakEnemy.tscn<>uid://baxv14pefvupm::::res://Scenes/UI.tscn<>res://Scripts/Spawner.gd
-MainMenu.tscn::PackedScene::1923838316148400010::1690799314::0::1::::<><>::res://Scripts/MainMenu.gd<>uid://cioqj5u7bktei::::res://Assets/Tigran_Arzakantsyan.jpg<>uid://k15vr1s7d2wm::::res://Assets/tigran simulator logo.png
-Player.tscn::PackedScene::95530516767351197::1690799314::0::1::::<><>::res://Scripts/Player.gd<>uid://dy8b0ajq35lvq::::res://Assets/player.png<>uid://ce442l56d761d::::res://Scenes/Shot.tscn
-Shot.tscn::PackedScene::5115273331546510467::1690799315::0::1::::<><>::res://Scripts/Shot.gd
-UI.tscn::PackedScene::2435224406064591762::1690799314::0::1::::<><>::uid://wyqbku6famom::::res://Assets/Health.png<>res://Scripts/UI.gd
-WeakEnemy.tscn::PackedScene::4744749028503141778::1690799314::0::1::::<><>::uid://cjwor2k8f22de::::res://Assets/weak enemy.png<>res://Scripts/WeakEnemy.gd<>uid://ncmij20y0b8g::::res://Scenes/WeakEnemyShot.tscn
+::res://Scenes/::1690823741
+DeathScreen.tscn::PackedScene::5486797224248040053::1690823741::0::1::::<><>::res://Scripts/DeathScreen.gd<>res://Scripts/DeathScreenScore.gd
+ExplodingEnemy.tscn::PackedScene::6594003955089856432::1690816004::0::1::::<><>::res://Scripts/ExplodingEnemy.gd<>uid://cbtiqfxpuh8i4
+Level.tscn::PackedScene::5412899007866447797::1690813258::0::1::::<><>::uid://dmo7wjw5la5ey
+MainMenu.tscn::PackedScene::1923838316148400010::1690813258::0::1::::<><>::res://Scripts/MainMenu.gd<>uid://cioqj5u7bktei
+Player.tscn::PackedScene::95530516767351197::1690813258::0::1::::<><>::res://Scripts/Player.gd<>uid://dy8b0ajq35lvq
+Score.gd::GDScript::-1::1690809754::0::1::::<>Label<>::
+Shot.tscn::PackedScene::5115273331546510467::1690813258::0::1::::<><>::res://Scripts/Shot.gd
+UI.tscn::PackedScene::2435224406064591762::1690813259::0::1::::<><>::uid://wyqbku6famom
+WeakEnemy.tscn::PackedScene::4744749028503141778::1690813258::0::1::::<><>::uid://cjwor2k8f22de
 WeakEnemyShot.tscn::PackedScene::917327128655790356::1690731533::0::1::::<><>::res://Scripts/WeakEnemyShot.gd
-::res://Scripts/::1690796629
+::res://Scripts/::1690823741
 DeathScreen.gd::GDScript::-1::1690796291::0::1::::<>Control<>::
+DeathScreenScore.gd::GDScript::-1::1690810015::0::1::::<>Label<>::
+ExplodingEnemy.gd::GDScript::-1::1690813234::0::1::::<>CharacterBody2D<>::
 MainMenu.gd::GDScript::-1::1690796248::0::1::::<>Control<>::
-Player.gd::GDScript::-1::1690733886::0::1::::<>CharacterBody2D<>::
+Player.gd::GDScript::-1::1690806202::0::1::::<>CharacterBody2D<>::
 Shot.gd::GDScript::-1::1690725634::0::1::::<>Area2D<>::
-Spawner.gd::GDScript::-1::1690734195::0::1::::<>Node<>::
+Spawner.gd::GDScript::-1::1690805739::0::1::::<>Node<>::
 UI.gd::GDScript::-1::1690731154::0::1::::<>Control<>::
-WeakEnemy.gd::GDScript::-1::1690796629::0::1::::<>CharacterBody2D<>::
+WeakEnemy.gd::GDScript::-1::1690810362::0::1::::<>CharacterBody2D<>::
 WeakEnemyShot.gd::GDScript::-1::1690727031::0::1::::<>Area2D<>::
+::res://Scripts/Global/::1690809188
+Game.gd::GDScript::-1::1690809188::0::1::::<>Node<>::

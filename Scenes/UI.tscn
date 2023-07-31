@@ -1,7 +1,8 @@
-[gd_scene load_steps=26 format=3 uid="uid://baxv14pefvupm"]
+[gd_scene load_steps=27 format=3 uid="uid://baxv14pefvupm"]
 
 [ext_resource type="Texture2D" uid="uid://wyqbku6famom" path="res://Assets/Health.png" id="1_1bih2"]
 [ext_resource type="Script" path="res://Scripts/UI.gd" id="1_681cp"]
+[ext_resource type="Script" path="res://Scenes/Score.gd" id="3_y4oxw"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ejhf8"]
 atlas = ExtResource("1_1bih2")
@@ -209,5 +210,21 @@ position = Vector2(48, 48)
 scale = Vector2(3, 3)
 sprite_frames = SubResource("SpriteFrames_k18ys")
 animation = &"lose2"
+
+[node name="Score" type="Label" parent="."]
+layout_mode = 0
+offset_left = 512.0
+offset_top = 16.0
+offset_right = 569.0
+offset_bottom = 36.0
+scale = Vector2(2, 2)
+theme_override_colors/font_color = Color(0.996094, 0.3125, 0.570313, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 10
+theme_override_constants/shadow_offset_y = 10
+theme_override_constants/outline_size = 10
+text = "Score"
+script = ExtResource("3_y4oxw")
 
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]

@@ -15,11 +15,19 @@ run/main_scene="res://Scenes/MainMenu.tscn"
 config/features=PackedStringArray("4.1", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+Game="*res://Scripts/Global/Game.gd"
+
 [display]
 
 window/size/viewport_width=704
 window/size/viewport_height=576
 mouse_cursor/custom_image="res://Assets/crosshair.png"
+
+[gui]
+
+theme/custom_font="res://Assets/Fonts/dynamic.ttf"
 
 [input]
 

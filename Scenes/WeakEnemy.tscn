@@ -57,7 +57,6 @@ collision_mask = 7
 shape = SubResource("CircleShape2D_6odn8")
 
 [node name="Cooldown" type="Timer" parent="." groups=["mobs"]]
-wait_time = 2.0
 autostart = true
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

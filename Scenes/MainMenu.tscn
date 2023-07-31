@@ -35,7 +35,12 @@ offset_right = 28.0
 offset_bottom = 63.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_colors/font_hover_color = Color(1, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 20
+theme_override_font_sizes/font_size = 46
 text = "START"
+flat = true
 
 [node name="Quit" type="Button" parent="."]
 layout_mode = 1
@@ -50,8 +55,13 @@ offset_right = 28.0
 offset_bottom = 207.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_colors/font_hover_color = Color(1, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 20
+theme_override_font_sizes/font_size = 46
 text = "Quit
 "
+flat = true
 
 [connection signal="pressed" from="Start" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Quit" to="." method="_on_button_2_pressed"]

@@ -15,7 +15,7 @@ func _process(delta):
 
 func spawn(x: float, y: float):
 	if can_spawn:
-		SpawnCooldown.start(RNG.randf_range(0.0, 2.0))
+		SpawnCooldown.start(RNG.randf_range(0.5, 2.0))
 		can_spawn = false
 		var e = enemies[RNG.randi_range(0, enemies.size()-1)].instantiate()
 		owner.add_child(e)

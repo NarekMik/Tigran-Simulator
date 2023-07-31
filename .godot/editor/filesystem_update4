@@ -1,15 +1,1 @@
-res://Scenes/Level.tscn
-res://Scenes/Player.tscn
-res://Scenes/WeakEnemy.tscn
-res://Scenes/UI.tscn
-res://main menu.tscn
-res://MainMenu.tscn
-res://Scripts/MainMenu.gd
-res://Scenes/MainMenu.tscn
 res://Scenes/DeathScreen.tscn
-res://Scripts/DeathScreen.gd
-res://Scripts/WeakEnemy.gd
-res://Scenes/Shot.tscn
-res://ExplodingEnemy.tscn
-res://ExplodingEnemy.gd
-res://Scenes/ExplodingEnemy.tscn

@@ -1,10 +1,11 @@
-[gd_scene load_steps=13 format=3 uid="uid://cjebwkesykqsb"]
+[gd_scene load_steps=14 format=3 uid="uid://cjebwkesykqsb"]
 
 [ext_resource type="Texture2D" uid="uid://dmo7wjw5la5ey" path="res://Assets/ground texture.png" id="1_psgpd"]
 [ext_resource type="PackedScene" uid="uid://bmjmx7di115j" path="res://Scenes/Player.tscn" id="2_f78dg"]
 [ext_resource type="PackedScene" uid="uid://b8unk8ykvml8u" path="res://Scenes/WeakEnemy.tscn" id="3_lgo6y"]
 [ext_resource type="PackedScene" uid="uid://baxv14pefvupm" path="res://Scenes/UI.tscn" id="4_ce0h3"]
 [ext_resource type="Script" path="res://Scripts/Spawner.gd" id="5_byjxn"]
+[ext_resource type="PackedScene" uid="uid://c07gjtxxbrnnk" path="res://Scenes/ExplodingEnemy.tscn" id="6_8fduv"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bn6me"]
 
@@ -63,7 +64,7 @@ shape = SubResource("RectangleShape2D_0gskf")
 
 [node name="Spawner" type="Node" parent="."]
 script = ExtResource("5_byjxn")
-enemies = Array[PackedScene]([ExtResource("3_lgo6y")])
+enemies = Array[PackedScene]([ExtResource("3_lgo6y"), ExtResource("6_8fduv")])
 
 [node name="SpawnCooldown" type="Timer" parent="Spawner"]
 wait_time = 3.0

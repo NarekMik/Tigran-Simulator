@@ -1,8 +1,11 @@
 extends CharacterBody2D
 
+
+
 var deathb: bool = false
 var stop: bool = false
 var can_shoot: bool = false
+
 
 @export var SPEED: float = 30
 
@@ -30,6 +33,7 @@ func _physics_process(delta):
 	move_and_slide()
 
 func death():
+	set_collision_layer_value(3, false)
 	can_shoot = false
 	$CollisionShape2D.disabled = true
 	$AnimatedSprite2D.visible = false
@@ -37,6 +41,7 @@ func death():
 	$Area2D.monitoring = false
 	deathb = true
 	velocity = Vector2.ZERO
+	Game.score += 50
 
 
 func _on_area_2d_body_entered(body):

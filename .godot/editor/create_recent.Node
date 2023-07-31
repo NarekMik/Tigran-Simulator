@@ -1,10 +1,10 @@
+Label
 GPUParticles2D
 CPUParticles2D
 AnimatedSprite2D
 CharacterBody2D
 Button
 Sprite2D
-Label
 Timer
 Node
 CollisionShape2D
